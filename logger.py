@@ -44,7 +44,7 @@ def find_data():
             4: 'Поиск по дате рождения',
             5: 'Поиск по классу',
             6: 'Поиск по месту',
-            7: 'Поиск по статусу',
+            7: 'Поиск по оценке',
             8: 'Поиск класса ученика'
         }
     tool = \
@@ -55,7 +55,7 @@ def find_data():
             4: 'Дата рождения',
             5: 'Класс',
             6: 'Место',
-            7: 'Статус',
+            7: 'Оценка',
             8: 'Место'
         }
 
@@ -63,8 +63,8 @@ def find_data():
         print(f'{v}:{k}')
 
     operation = int(input('Введите номер операции: '))
-    if operation !=8:
-        if operation == 6:
+    if operation != 8:
+        if operation == 6 or operation == 7:
             find_item = int(input(f'Введите {tool.get(operation).lower()} для поиска: '))
         else:
             find_item = input(f'Введите {tool.get(operation).lower()} для поиска: ')
